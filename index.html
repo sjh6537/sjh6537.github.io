@@ -1,2 +1,11 @@
 <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
-HELLO GITHUB
+<script>
+mapkit.init({
+    authorizationCallback: function(done) {
+        fetch("/gettoken")
+            .then(res => res.text())
+            .then(done);
+    },
+    language: "es"
+});
+</script>
