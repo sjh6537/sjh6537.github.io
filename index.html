@@ -18,7 +18,7 @@ mapkit.init({
   region = new mapkit.CoordinateRegion(center, span);
 
 let map = new mapkit.Map("map", {
-  //region: region,
+  region: region,
   showsCompass: mapkit.FeatureVisibility.Hidden,
   showsZoomControl: true,
   showsMapTypeControl: true
