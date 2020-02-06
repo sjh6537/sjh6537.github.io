@@ -2,10 +2,10 @@
 <script>
 mapkit.init({
     authorizationCallback: function(done) {
+        /*
         fetch("/gettoken")
             .then(res => res.text())
             .then(done);
-    },
-    language: "es"
-});
+        */
+        done('{"alg": "ES256","kid": "BX3A44724X","typ": "JWT"}{"iss": "DK52GHLPVX","iat": 1437179036,"exp":1493298100,"origin":"https://sjh6537.github.io"}');
 </script>
