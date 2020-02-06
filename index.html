@@ -12,9 +12,17 @@ mapkit.init({
     },
         language: "zh-TW"
 });
+var mylat=25.047882, mylng=121.516941;
+navigator.geolocation.getCurrentPosition(function(position){
+    mylat=position.coords.latitude;
+    mylng=position.coords.longitude;
+    //map.setCenterAnimated(new mapkit.Coordinate(mylat, mylng), true);
+});
 
-  const center = new mapkit.Coordinate(25.047882, 121.516941),
-  span = new mapkit.CoordinateSpan(0.0125, 0.0125),
+
+
+  const center = new mapkit.Coordinate(mylat,mylng),
+  span = new mapkit.CoordinateSpan(0.0250, 0.0250),
   region = new mapkit.CoordinateRegion(center, span);
 
 let map = new mapkit.Map("map", {
@@ -22,12 +30,6 @@ let map = new mapkit.Map("map", {
   showsCompass: mapkit.FeatureVisibility.Hidden,
   showsZoomControl: true,
   showsMapTypeControl: true
-});
-
-navigator.geolocation.getCurrentPosition(function(position){
-    mylat=position.coords.latitude;
-    mylng=position.coords.longitude;
-    map.setCenterAnimated(new mapkit.Coordinate(mylat, mylng), true);
 });
 
 
