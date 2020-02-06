@@ -26,5 +26,15 @@ mapkit.init({
    "origin":"https://sjh6537.github.io"
 }
 */
+const center = new mapkit.Coordinate(37.3327, -122.0053),
+  span = new mapkit.CoordinateSpan(0.0125, 0.0125),
+  region = new mapkit.CoordinateRegion(center, span);
+
+let map = new mapkit.Map("map", {
+  region: region,
+  showsCompass: mapkit.FeatureVisibility.Hidden,
+  showsZoomControl: false,
+  showsMapTypeControl: false
+});
 </script>
 
