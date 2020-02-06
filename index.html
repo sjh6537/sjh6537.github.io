@@ -1,31 +1,18 @@
-eyJhbGciOiJFUzI1NiIsImtpZCI6IkJYM0E0NDcyNFgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJESzUyR0hMUFZYIiwiaWF0IjoxNTgwODcwMDAwLCJleHAiOjIwMDMyOTgxMDAsIm9yaWdpbiI6Imh0dHBzOi8vc2poNjUzNy5naXRodWIuaW8ifQ.wV1q0zgRW0cu4j8f9oZC2qPjSvv2-9iiNlfJWQ5yyPMLb16qqKCLOxoZJWrqExrXBJEzmT8VLry1pNoVNslOqQ
+<html>
+<head>
+</head>
+<body>
+	<div id="map"></div>
+
 <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
 <script>
 mapkit.init({
     authorizationCallback: function(done) {
-        /*
-        fetch("/gettoken")
-            .then(res => res.text())
-            .then(done);
-        */
-        /*
-        '{"alg": "ES256","kid": "BX3A44724X","typ": "JWT"}
-        {
-        "iss": "DK52GHLPVX","iat":
-        1437179036,"exp":1493298100,
-        "origin":"https://sjh6537.github.io"}');*/
         done("eyJhbGciOiJFUzI1NiIsImtpZCI6IkJYM0E0NDcyNFgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJESzUyR0hMUFZYIiwiaWF0IjoxNTgwODcwMDAwLCJleHAiOjIwMDMyOTgxMDAsIm9yaWdpbiI6Imh0dHBzOi8vc2poNjUzNy5naXRodWIuaW8ifQ.wV1q0zgRW0cu4j8f9oZC2qPjSvv2-9iiNlfJWQ5yyPMLb16qqKCLOxoZJWrqExrXBJEzmT8VLry1pNoVNslOqQ");
     },
         language: "es"
 });
-/*
-{
-   "iss": "DK52GHLPVX",
-   "iat": 1580870000,
-   "exp": 2003298100,
-   "origin":"https://sjh6537.github.io"
-}
-*/
+
 const center = new mapkit.Coordinate(37.3327, -122.0053),
   span = new mapkit.CoordinateSpan(0.0125, 0.0125),
   region = new mapkit.CoordinateRegion(center, span);
@@ -38,6 +25,6 @@ let map = new mapkit.Map("map", {
 });
 </script>
 
-<body>
-	<div id="map"></div>
+
 </body>
+</html>
